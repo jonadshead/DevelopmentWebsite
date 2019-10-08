@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 *
 {
     text-align: center;
@@ -7,6 +10,12 @@
 body
 {
     background-color: rgb(213, 246, 247);
+}
+
+.mailStyle
+{
+    color: #0000EE;
+    text-decoration: none;
 }
 
 .paragraphStyle
@@ -21,7 +30,7 @@ body
 
 a
 {
-    color: rgba(0, 0, 0, 0);
+    color: #00000000;
 }
 
 .navbar
@@ -35,7 +44,7 @@ a
     float: left;
     text-align: center;
     padding: 12px;
-    color: black;
+    color: #000000;
     text-decoration: none;
     font-size: 20px;
     border-radius: 8px;
