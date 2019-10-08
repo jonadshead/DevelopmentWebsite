@@ -3,14 +3,17 @@
     text-align: center;
     font-family: 'Mansalva', cursive;
 }
+
 body
 {
     background-color: rgb(213, 246, 247);
 }
+
 .paragraphStyle
 {
     font-size: 20px;
 }
+
 .subHeadingStyle
 {
     font-size: 30px;
@@ -19,34 +22,30 @@ body
 a
 {
     color: rgba(0, 0, 0, 0);
-} */
+}
 
-/* Style the navigation bar */
 .navbar
 {
     width: 100%;
-    background-color:rgb(194, 225, 226);
     overflow: auto;
 }
   
-/* Navbar links */
 .navbar a
 {
     float: left;
     text-align: center;
     padding: 12px;
-    color: white;
+    color: black;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
+    border-radius: 8px;
 }
   
-/* Navbar links on mouse-over */
 .navbar a:hover
 {
-    background-color: rgb(196, 227, 228);
+    background-color: rgb(203, 234, 238);
 }
-  
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+
 @media screen and (max-width: 500px) 
 {
     .navbar a 
