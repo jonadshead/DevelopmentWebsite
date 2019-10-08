@@ -1,0 +1,74 @@
+/* *
+{
+    background-color: rgb(213, 246, 247);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Mansalva', cursive;
+}
+.paragraphStyle
+{
+    font-size: 20px;
+}
+.subHeadingStyle
+{
+    margin-top : 300px;
+    font-size: 30px;
+    /* font-style: italic; 
+}*/
+
+.menuStyle
+{
+    font-size: 30px;
+    border-radius: 8px;
+    border: hidden;
+    float: left;
+    margin-top : 120px;
+    margin-left : 15px;
+}
+
+.menuLogoStyle
+{
+    float: left;
+    padding-bottom: 70px;
+}
+
+a
+{
+    color: rgba(0, 0, 0, 0);
+} */
+
+/* Style the navigation bar */
+.navbar {
+    width: 100%;
+    background-color:rgb(213, 246, 247);
+    overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  /* Current/active navbar link */
+  .active {
+    background-color: #4CAF50;
+  }
+  
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
