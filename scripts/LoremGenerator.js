@@ -98,8 +98,7 @@ function IsNewParagraph(i)
 
 function CallGenerator(doParagraph)
 {
-    let i = prompt("Amount of Words:");
-    document.getElementById("GeneratorOutput").innerHTML = GenerateLoremString(TryParseInt(i), doParagraph);
+    document.getElementById("GeneratorOutput").innerHTML = GenerateLoremString(TryParseInt(prompt("Amount of Words:")), doParagraph);
 }
 
 function TryParseInt(str)
