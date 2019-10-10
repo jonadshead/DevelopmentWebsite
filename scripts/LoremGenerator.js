@@ -79,9 +79,7 @@ function GetRandomWord()
 function GetRandomSentenceLength(wordsAmount)
 {
     let f = Math.ceil(Math.random() * 20) + 5;
-
-    if (f > wordsAmount)
-        f = wordsAmount;
+    f = f > wordsAmount ? wordsAmount : f;
 
     return f;
 }
