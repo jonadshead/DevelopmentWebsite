@@ -91,6 +91,14 @@ a
     background-color: rgb(181, 228, 240);
 }
 
+.buttonStyle
+{
+    padding: 15px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
 @media screen and (max-width: 500px) 
 {
     .navbar a 

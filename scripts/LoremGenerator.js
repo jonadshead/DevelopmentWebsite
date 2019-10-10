@@ -1,8 +1,12 @@
-function GenerateLoremString(wordsAmount)
+function GenerateLoremString(wordsAmount, doParagraphs)
 {
     let str = "";
     let totalAmount = 0;
     let sentenceLength = GetRandomSentenceLength(wordsAmount);
+    let sentenceCounter = 0;
+
+    if (wordsAmount > 999999)
+        wordsAmount = 999999;
 
     while (totalAmount < wordsAmount)
     {
@@ -12,7 +16,6 @@ function GenerateLoremString(wordsAmount)
                 strTemp = GetRandomWord() + ", ";
             else
                 strTemp = GetRandomWord() + " ";
-
             
             if (i == 0)
                 strTemp = strTemp.charAt(0).toUpperCase() + strTemp.substring(1);
@@ -23,6 +26,13 @@ function GenerateLoremString(wordsAmount)
         str += GetRandomWord() + ". ";
 
         totalAmount += sentenceLength;
+        sentenceCounter++;
+
+        if (doParagraphs && IsNewParagraph(sentenceCounter))
+        {
+            str += "<br><br>";
+            sentenceCounter = 0;
+        }
     }
     
     return str;
@@ -78,13 +88,18 @@ function GetRandomSentenceLength(wordsAmount)
 
 function IsSeparator()
 {
-    return Math.ceil(Math.random() * 10) == 10;
+    return Math.ceil(Math.random() * 10) == 1;
 }
 
-function CallGenerator()
+function IsNewParagraph(i)
+{
+    return i > 2 ? (Math.ceil(Math.random() * 4) == 1) : false;
+}
+
+function CallGenerator(doParagraph)
 {
     let i = prompt("Amount of Words:");
-    document.getElementById("GeneratorOutput").innerHTML = GenerateLoremString(TryParseInt(i));
+    document.getElementById("GeneratorOutput").innerHTML = GenerateLoremString(TryParseInt(i), doParagraph);
 }
 
 function TryParseInt(str)
